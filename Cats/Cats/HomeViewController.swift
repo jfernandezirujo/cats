@@ -16,6 +16,10 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        CatsRepository.getCats(completionHandler: { error in
+            
+            
+        })
     }
 
     func configureUI() {
