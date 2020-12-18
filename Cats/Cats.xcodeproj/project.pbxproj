@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		53C8C8D1EBF922A316E1BBC9 /* Pods_CatsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B886E8855FF55E90B4D839CA /* Pods_CatsTests.framework */; };
 		D99B744E258CE4B7000B8892 /* CatsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99B744D258CE4B7000B8892 /* CatsRepository.swift */; };
+		D99B7452258CF7A1000B8892 /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99B7451258CF7A1000B8892 /* Cat.swift */; };
 		D9B443A1258A811C001FBB00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B443A0258A811C001FBB00 /* AppDelegate.swift */; };
 		D9B443A3258A811C001FBB00 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B443A2258A811C001FBB00 /* SceneDelegate.swift */; };
 		D9B443A5258A811C001FBB00 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B443A4258A811C001FBB00 /* HomeViewController.swift */; };
@@ -36,6 +37,7 @@
 		B886E8855FF55E90B4D839CA /* Pods_CatsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFF3041373E5695CC7CCE3A3 /* Pods_Cats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cats.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D99B744D258CE4B7000B8892 /* CatsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsRepository.swift; sourceTree = "<group>"; };
+		D99B7451258CF7A1000B8892 /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
 		D9B4439D258A811C001FBB00 /* Cats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9B443A0258A811C001FBB00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9B443A2258A811C001FBB00 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				D9B443A0258A811C001FBB00 /* AppDelegate.swift */,
 				D9B443A2258A811C001FBB00 /* SceneDelegate.swift */,
 				D99B744D258CE4B7000B8892 /* CatsRepository.swift */,
+				D99B7451258CF7A1000B8892 /* Cat.swift */,
 				D9B443A4258A811C001FBB00 /* HomeViewController.swift */,
 				D9B443A6258A811C001FBB00 /* Main.storyboard */,
 				D9B443A9258A8122001FBB00 /* Assets.xcassets */,
@@ -304,6 +307,7 @@
 			files = (
 				D9B443A5258A811C001FBB00 /* HomeViewController.swift in Sources */,
 				D9B443A1258A811C001FBB00 /* AppDelegate.swift in Sources */,
+				D99B7452258CF7A1000B8892 /* Cat.swift in Sources */,
 				D99B744E258CE4B7000B8892 /* CatsRepository.swift in Sources */,
 				D9B443A3258A811C001FBB00 /* SceneDelegate.swift in Sources */,
 			);

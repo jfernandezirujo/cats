@@ -16,10 +16,8 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
-        CatsRepository.getCats(completionHandler: { error in
-            
-            
-        })
+        getCats()
+        
     }
 
     func configureUI() {
@@ -30,6 +28,14 @@ class HomeViewController: UIViewController {
         
         tabBarItem.title = "Home"
         tabBarItem.image = UIImage(systemName: "house")
+    }
+    
+    func getCats(){
+        CatsRepository.getCats(completionHandler: { cats, error in
+            
+            print(cats)
+            
+        })
     }
 }
 
