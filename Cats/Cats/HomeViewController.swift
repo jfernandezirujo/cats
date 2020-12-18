@@ -15,12 +15,10 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        config()
-
+        configureUI()
     }
 
-    func config() {
+    func configureUI() {
         lblCat.text = "CATS!"
         lblCat.textColor = .black
         
@@ -28,9 +26,6 @@ class HomeViewController: UIViewController {
         
         tabBarItem.title = "Home"
         tabBarItem.image = UIImage(systemName: "house")
-        
-        
     }
-
 }
 
