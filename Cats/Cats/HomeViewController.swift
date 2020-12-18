@@ -14,12 +14,14 @@ class HomeViewController: UIViewController {
 
     @IBOutlet var lblCat: UILabel!
     @IBOutlet var imgCat: UIImageView!
+    @IBOutlet var btnReload: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
         getCats()
     }
+    
 
     func configureUI() {
         lblCat.text = "CATS!"
@@ -27,6 +29,8 @@ class HomeViewController: UIViewController {
         
         tabBarItem.title = "Home"
         tabBarItem.image = UIImage(systemName: "house")
+        
+        btnReload.setTitle("get cat", for: .normal)
     }
     
     func getCats(){
@@ -35,18 +39,19 @@ class HomeViewController: UIViewController {
             if let error = error {
                 print(error)
             }
-            
-            
            else if let cat = cats.first {
                 self.showImage(url: cat.url)
             }
-    
         })
     }
     
     func showImage(url: String) {
         let url = URL(string: url)
         imgCat.kf.setImage(with: url)
+    }
+    
+    @IBAction func reloadCat(){
+        getCats()
     }
     
 }
