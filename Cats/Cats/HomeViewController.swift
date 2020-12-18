@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Kingfisher
+
 
 class HomeViewController: UIViewController {
 
@@ -17,14 +19,11 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         configureUI()
         getCats()
-        
     }
 
     func configureUI() {
         lblCat.text = "CATS!"
         lblCat.textColor = .black
-        
-        imgCat.image = UIImage(named: "Image")
         
         tabBarItem.title = "Home"
         tabBarItem.image = UIImage(systemName: "house")
@@ -33,9 +32,22 @@ class HomeViewController: UIViewController {
     func getCats(){
         CatsRepository.getCats(completionHandler: { cats, error in
             
-            print(cats)
+            if let error = error {
+                print(error)
+            }
             
+            
+           else if let cat = cats.first {
+                self.showImage(url: cat.url)
+            }
+    
         })
     }
+    
+    func showImage(url: String) {
+        let url = URL(string: url)
+        imgCat.kf.setImage(with: url)
+    }
+    
 }
 
