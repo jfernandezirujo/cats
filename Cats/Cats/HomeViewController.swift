@@ -18,6 +18,7 @@ class HomeViewController: UIViewController {
     @IBOutlet var btnFav: UIButton!
     
     var cat: Cat?
+    var favorited: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,9 +65,19 @@ class HomeViewController: UIViewController {
                 print(error)
             }
             else {
-                print("fav")
+                self.favorited = true
+                self.configureFavBtn()
             }
         })
+    }
+    
+    func configureFavBtn() {
+        if favorited {
+            btnFav.setTitle("dislike", for: .normal)
+              }
+              else {
+            btnFav.setTitle("like", for: .normal)
+              }
     }
     
     @IBAction func reloadCat(){
@@ -74,7 +85,16 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func fav(){
-        favCat()
+        
+        if favorited {
+            
+        }
+        else {
+           favCat()
+            
+        }
+        
+        
     }
     
 }
