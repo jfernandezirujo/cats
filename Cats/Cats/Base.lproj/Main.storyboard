@@ -38,18 +38,28 @@
                                     <action selector="reloadCat" destination="FGu-pT-cT4" eventType="touchUpInside" id="QxU-Em-bbO"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="66q-Wa-ecE">
+                                <rect key="frame" x="87" y="654" width="60" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="fav" destination="FGu-pT-cT4" eventType="touchUpInside" id="yTb-Vj-ITE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="mTI-D7-QLr" firstAttribute="centerX" secondItem="ANA-pN-9Ns" secondAttribute="centerX" id="4Lx-mn-POZ"/>
+                            <constraint firstItem="66q-Wa-ecE" firstAttribute="top" secondItem="UjA-gJ-lOd" secondAttribute="bottom" constant="56" id="A9j-hB-mSI"/>
                             <constraint firstItem="YFY-iU-cyj" firstAttribute="trailing" secondItem="mTI-D7-QLr" secondAttribute="trailing" id="Eam-gt-h6p"/>
                             <constraint firstItem="mTI-D7-QLr" firstAttribute="centerX" secondItem="ANA-pN-9Ns" secondAttribute="centerX" id="GrY-lo-skx"/>
+                            <constraint firstItem="66q-Wa-ecE" firstAttribute="width" secondItem="UjA-gJ-lOd" secondAttribute="height" multiplier="2:1" id="Gvb-h5-Q5k"/>
                             <constraint firstItem="mTI-D7-QLr" firstAttribute="centerY" secondItem="ANA-pN-9Ns" secondAttribute="centerY" id="QLc-6h-hZQ"/>
                             <constraint firstItem="mTI-D7-QLr" firstAttribute="top" secondItem="YFY-iU-cyj" secondAttribute="bottom" constant="-3" id="Soa-KT-5QX"/>
                             <constraint firstItem="mTI-D7-QLr" firstAttribute="centerY" secondItem="ANA-pN-9Ns" secondAttribute="centerY" id="Tjr-tm-FE8"/>
                             <constraint firstItem="YFY-iU-cyj" firstAttribute="leading" secondItem="mTI-D7-QLr" secondAttribute="leading" id="UuF-rz-0OI"/>
                             <constraint firstItem="UjA-gJ-lOd" firstAttribute="top" secondItem="mTI-D7-QLr" secondAttribute="bottom" constant="56" id="h3W-H4-2zY"/>
                             <constraint firstItem="UjA-gJ-lOd" firstAttribute="leading" secondItem="mTI-D7-QLr" secondAttribute="leading" id="iy1-v5-scS"/>
+                            <constraint firstItem="66q-Wa-ecE" firstAttribute="leading" secondItem="UjA-gJ-lOd" secondAttribute="leading" id="ldR-k7-ex4"/>
                             <constraint firstItem="UjA-gJ-lOd" firstAttribute="trailing" secondItem="mTI-D7-QLr" secondAttribute="trailing" id="sWZ-Dn-cio"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WE2-vP-7pB"/>
@@ -58,6 +68,7 @@
                         <color key="badgeColor" cocoaTouchSystemColor="darkTextColor"/>
                     </tabBarItem>
                     <connections>
+                        <outlet property="btnFav" destination="66q-Wa-ecE" id="VWa-6O-Qia"/>
                         <outlet property="btnReload" destination="UjA-gJ-lOd" id="CYO-t2-0Fv"/>
                         <outlet property="imgCat" destination="mTI-D7-QLr" id="5bl-9c-Kin"/>
                         <outlet property="lblCat" destination="YFY-iU-cyj" id="gnt-ZA-BV3"/>

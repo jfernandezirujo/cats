@@ -11,6 +11,8 @@ import Alamofire
 import SwiftyJSON
 
 class CatsRepository {
+
+    static let headers: HTTPHeaders = ["x-api-key" : "6201d662-2460-47c5-a198-5b75d378eedd"]
     
     static func getCats(completionHandler: @escaping (_ cats: [Cat], _ error: Error?) -> Void) {
         
@@ -33,11 +35,22 @@ class CatsRepository {
                 }
                 completionHandler(arrayCats, nil)
             }
-            
         })
-        
-        
     }
     
-    
+    static func saveAsFav(id: String, completionHandler: @escaping (_ error: Error?) -> Void) {
+        var urlString = "https://api.thecatapi.com/v1/favourites"
+        
+        AF.request(urlString, method: .post, parameters: ["image_id" : id], encoder: JSONParameterEncoder.default, headers: headers, interceptor: nil, requestModifier: nil).responseJSON(completionHandler: {response in
+            
+            if let error = response.error{
+                print(error)
+                completionHandler(error)
+            }
+            
+            else {
+                completionHandler(nil)
+            }
+        })
+    }
 }
