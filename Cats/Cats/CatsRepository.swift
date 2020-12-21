@@ -53,4 +53,22 @@ class CatsRepository {
             }
         })
     }
+    
+    
+    static func deleteFav(id: String, completionHandler: @escaping (_ error: Error?) -> Void) {
+        var urlString = "https://api.thecatapi.com/v1/favourites/\(id)"
+        
+        AF.request(urlString, method: .delete, parameters: ["" : ""], encoder: JSONParameterEncoder.default, headers: headers, interceptor: nil, requestModifier: nil).responseJSON(completionHandler: {response in
+            
+            if let error = response.error{
+                print(error)
+                completionHandler(error)
+            }
+            
+            else {
+                completionHandler(nil)
+            }
+        })
+    }
+    
 }

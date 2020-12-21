@@ -17,6 +17,7 @@
 		D9B443AA258A8122001FBB00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9B443A9258A8122001FBB00 /* Assets.xcassets */; };
 		D9B443AD258A8122001FBB00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9B443AB258A8122001FBB00 /* LaunchScreen.storyboard */; };
 		D9B443B8258A8122001FBB00 /* CatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B443B7258A8122001FBB00 /* CatsTests.swift */; };
+		D9EF49AD259138B6007675F9 /* FavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9EF49AC259138B6007675F9 /* FavViewController.swift */; };
 		F135B7213D081CDCD3E4EAF0 /* Pods_Cats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFF3041373E5695CC7CCE3A3 /* Pods_Cats.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		D9B443B3258A8122001FBB00 /* CatsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9B443B7258A8122001FBB00 /* CatsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsTests.swift; sourceTree = "<group>"; };
 		D9B443B9258A8122001FBB00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9EF49AC259138B6007675F9 /* FavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavViewController.swift; sourceTree = "<group>"; };
 		E73A974CE455E779C1B950D8 /* Pods-Cats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cats.release.xcconfig"; path = "Target Support Files/Pods-Cats/Pods-Cats.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,6 +122,7 @@
 				D99B744D258CE4B7000B8892 /* CatsRepository.swift */,
 				D99B7451258CF7A1000B8892 /* Cat.swift */,
 				D9B443A4258A811C001FBB00 /* HomeViewController.swift */,
+				D9EF49AC259138B6007675F9 /* FavViewController.swift */,
 				D9B443A6258A811C001FBB00 /* Main.storyboard */,
 				D9B443A9258A8122001FBB00 /* Assets.xcassets */,
 				D9B443AB258A8122001FBB00 /* LaunchScreen.storyboard */,
@@ -305,6 +308,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9EF49AD259138B6007675F9 /* FavViewController.swift in Sources */,
 				D9B443A5258A811C001FBB00 /* HomeViewController.swift in Sources */,
 				D9B443A1258A811C001FBB00 /* AppDelegate.swift in Sources */,
 				D99B7452258CF7A1000B8892 /* Cat.swift in Sources */,

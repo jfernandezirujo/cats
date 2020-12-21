@@ -18,7 +18,11 @@ class HomeViewController: UIViewController {
     @IBOutlet var btnFav: UIButton!
     
     var cat: Cat?
-    var favorited: Bool = false
+    var favorited: Bool = false { didSet
+        {
+            configureFavBtn()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +50,7 @@ class HomeViewController: UIViewController {
            else if let cat = cats.first {
                 self.cat = cat
                 self.showImage(url: cat.url)
+                self.favorited = false
             }
         })
     }
@@ -66,7 +71,6 @@ class HomeViewController: UIViewController {
             }
             else {
                 self.favorited = true
-                self.configureFavBtn()
             }
         })
     }
@@ -80,6 +84,24 @@ class HomeViewController: UIViewController {
               }
     }
     
+    
+    func deleteFav() {
+        
+        guard let cat = cat else { return }
+        
+        CatsRepository.deleteFav(id: cat.id, completionHandler: {
+            error in
+            
+            if let error = error {
+                print(error)
+            }
+            
+            else{
+                self.favorited = false
+            }
+        })
+    }
+    
     @IBAction func reloadCat(){
         getCats()
     }
@@ -87,7 +109,7 @@ class HomeViewController: UIViewController {
     @IBAction func fav(){
         
         if favorited {
-            
+            deleteFav()
         }
         else {
            favCat()
