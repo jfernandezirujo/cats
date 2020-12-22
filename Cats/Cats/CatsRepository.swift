@@ -71,4 +71,36 @@ class CatsRepository {
         })
     }
     
+    static func getFavs(completionHandler: @escaping (_ cats: [Cat]?, _ error: Error?) -> Void) {
+        
+        var urlString = "https://api.thecatapi.com/v1/favourites"
+        
+        var urlRequest = URLRequest(url: URL(string: urlString)!)
+        urlRequest.httpMethod = HTTPMethod.get.rawValue
+        urlRequest = try! URLEncoding.default.encode(urlRequest, with: nil)
+        urlRequest.setValue("6201d662-2460-47c5-a198-5b75d378eedd", forHTTPHeaderField: "x-api-key")
+        
+        AF.request(urlRequest).validate().responseJSON(completionHandler: { response in
+            
+            if let error = response.error {
+                print(error)
+                completionHandler([], error)
+            }
+            
+            else if let value = response.value{
+                var json = JSON(value)
+                var jsonFavCats = json.arrayValue
+                var arrayFavCats: [Cat] = []
+                
+                for jsonFavCat in jsonFavCats {
+                    let favCat = Cat(json: jsonFavCat)
+                    
+                    arrayFavCats.append(favCat)
+                }
+                
+                completionHandler(arrayFavCats, nil)
+            }
+        })
+    }
+    
 }

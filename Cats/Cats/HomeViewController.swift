@@ -84,7 +84,6 @@ class HomeViewController: UIViewController {
               }
     }
     
-    
     func deleteFav() {
         
         guard let cat = cat else { return }
@@ -113,11 +112,7 @@ class HomeViewController: UIViewController {
         }
         else {
            favCat()
-            
         }
-        
-        
     }
-    
 }
 

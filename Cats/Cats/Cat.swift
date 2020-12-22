@@ -15,6 +15,8 @@ class Cat {
     
     init(json: JSON) {
         self.id = json["id"].stringValue
-        self.url = json["url"].stringValue
+        
+        
+        self.url = json["url"].string ?? json["image"]["url"].stringValue
     }
 }
