@@ -12,17 +12,15 @@ import Kingfisher
 
 class FavViewController: UIViewController {
 
-    @IBOutlet var lbl: UILabel!
-    @IBOutlet var img: UIImageView!
-    @IBOutlet var lblID: UILabel!
+    @IBOutlet var tableV: UITableView!
+
     
     var cat:Cat?
     var arrayCats:[Cat] = [] { didSet
     {
-//         recargar tabla
+        tableV.reloadData()
     }
     }
-    
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,8 +35,7 @@ class FavViewController: UIViewController {
     }
     
     func configureUI(){
-        lbl.text = "Favs"
-        
+        title = "Favs"
         tabBarItem.title = "Favs"
         tabBarItem.image = UIImage(systemName: "heart")
     }
@@ -53,19 +50,29 @@ class FavViewController: UIViewController {
             else if let arrayFavCats = arrayFavCats {
                 self.arrayCats = arrayFavCats
                 }
-
             })
     }
-    
+}
 
-//    func configureCats(){
-//        guard let cat = cat else { return }
-//
-//        let url = URL(string: cat.url)
+extension FavViewController: UITableViewDelegate, UITableViewDataSource{
     
-//        lblID.text = cat.id
-//        img.kf.setImage(with: url)
-//
-//    }
+func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    arrayCats.count
+}
+
+func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
+    guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? TableViewCell else { return UITableViewCell() }
+    
+    cell.configureCats(cat: arrayCats[indexPath.row])
+    
+    return cell
+}
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 130
+    }
 
 }
+

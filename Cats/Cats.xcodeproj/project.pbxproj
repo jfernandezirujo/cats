@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		53C8C8D1EBF922A316E1BBC9 /* Pods_CatsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B886E8855FF55E90B4D839CA /* Pods_CatsTests.framework */; };
+		D961532F259231B500F6B430 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D961532E259231B500F6B430 /* TableViewCell.swift */; };
 		D99B744E258CE4B7000B8892 /* CatsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99B744D258CE4B7000B8892 /* CatsRepository.swift */; };
 		D99B7452258CF7A1000B8892 /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99B7451258CF7A1000B8892 /* Cat.swift */; };
 		D9B443A1258A811C001FBB00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B443A0258A811C001FBB00 /* AppDelegate.swift */; };
@@ -37,6 +38,7 @@
 		8D97A5DCB304685116450AA8 /* Pods-Cats.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cats.debug.xcconfig"; path = "Target Support Files/Pods-Cats/Pods-Cats.debug.xcconfig"; sourceTree = "<group>"; };
 		B886E8855FF55E90B4D839CA /* Pods_CatsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFF3041373E5695CC7CCE3A3 /* Pods_Cats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cats.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D961532E259231B500F6B430 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		D99B744D258CE4B7000B8892 /* CatsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsRepository.swift; sourceTree = "<group>"; };
 		D99B7451258CF7A1000B8892 /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
 		D9B4439D258A811C001FBB00 /* Cats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cats.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,6 +126,7 @@
 				D9B443A4258A811C001FBB00 /* HomeViewController.swift */,
 				D9EF49AC259138B6007675F9 /* FavViewController.swift */,
 				D9B443A6258A811C001FBB00 /* Main.storyboard */,
+				D961532E259231B500F6B430 /* TableViewCell.swift */,
 				D9B443A9258A8122001FBB00 /* Assets.xcassets */,
 				D9B443AB258A8122001FBB00 /* LaunchScreen.storyboard */,
 				D9B443AE258A8122001FBB00 /* Info.plist */,
@@ -313,6 +316,7 @@
 				D9B443A1258A811C001FBB00 /* AppDelegate.swift in Sources */,
 				D99B7452258CF7A1000B8892 /* Cat.swift in Sources */,
 				D99B744E258CE4B7000B8892 /* CatsRepository.swift in Sources */,
+				D961532F259231B500F6B430 /* TableViewCell.swift in Sources */,
 				D9B443A3258A811C001FBB00 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
